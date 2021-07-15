@@ -1,11 +1,17 @@
+![IDE](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green) 
+![Language](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)
+![Social](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Tson99.python-logging)
 ## 1. Vì sao cần sử dụng log?
-* Thông thường khi chúng ta muốn quan sát những gì đang xảy ra bên trong chương trình, thói quen của nhiều người
+Thông thường khi chúng ta muốn quan sát những gì đang xảy ra bên trong chương trình, thói quen của nhiều người
 mới học Python kể cả mình đó chính là sử dụng hàm `print()` để in lên terminal. Thay vào đó thì ở trong bài viết 
 này tôi sẽ chỉ cho các bạn cách để một chương trình vừa chạy vừa có thể ghi log (Dưới dạng file hoặc terminal)
 giúp cho việc theo dõi lịch sử của chương trình rõ ràng hơn. 
 
 ## 2. Làm sao sử dụng log trong python?
-* Python có thư viện chuẩn hỗ trợ cho viết ghi log là `logging`. Thư viện viết theo hướng `multithreading` nên
+Python có thư viện chuẩn hỗ trợ cho ghi log là `logging`. Thư viện viết theo hướng `multithreading` nên
 giảm nhẹ được khối lượng công việc cho luồng code chính của bạn rất nhiều.
   
 > Tham khảo về cơ chế đa luồng: [Đa luồng trong Python (multithreading)](https://viblo.asia/p/da-luong-trong-python-multithreading-WAyK8MO6ZxX)
@@ -24,6 +30,7 @@ giảm nhẹ được khối lượng công việc cho luồng code chính của
 ## 4. Thực hành
 
 ### 4.1. Sử dụng module logging cơ bản
+* File: [log_basic.py](src/log_basic.py)
 ```python
 import logging
 
@@ -52,6 +59,7 @@ if __name__ == '__main__':
     main()
 ```
 ### 4.2. Format logging cho đẹp!
+* File: [log_format.py](src/log_format.py)
 ```python
 import logging
 
@@ -83,7 +91,8 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-### 4.3. Log ra _file_ + _console_ cùng lúc 
+### 4.3. Ghi log ra file và console 
+* File: [log_handles.py](src/log_handles.py)
 ```python
 import logging
 
@@ -118,6 +127,7 @@ logger.info("This is an info message!")
 logger.warning("This is a warning message!")
 ```
 ### 4.4. Logging trong nhiều module
+* File: [log_modules.py](src/log_modules.py)
 ```python
 import logging
 from Package import module
@@ -131,7 +141,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-file module.py
+* File: [module.py](src/Package/module.py)
 ```python
 import logging
 
@@ -140,6 +150,7 @@ def do_something() -> None:
 ```
 
 ### 4.5. Logging trong exception
+* File: [log_exception.py](src/log_exception.py)
 ```python
 import logging
 
@@ -160,6 +171,10 @@ def main():
     try:
         open('/path/to/does/not/exist.txt', 'rb')
     except Exception as e:
+        #===========================================
+        # exec_info = False : Không ghi lỗi vào log
+        # exec_info = True : Ghi lỗi vào log
+        #===========================================
         LOGGER.error('Failed to open file', exc_info=False)
 
 
@@ -170,20 +185,19 @@ if __name__ == '__main__':
 ```
 ## 5. Working tree
 ```
-├── ./README.md
-├── ./__pycache__
-├── ./logfile.log
-├── ./src
-├── ./src/Package
-│  ├── ./src/Package/__init__.py
-│  ├── ./src/Package/__pycache__
-│  └── ./src/Package/module.py
-├── ./src/__init__.py
-├── ./src/log_basic.py
-├── ./src/log_exception.py
-├── ./src/log_format.py
-├── ./src/log_handles.py
-└── ./src/log_modules.py
+└── python-logging
+    ├── README.md
+    ├── .gitignore
+    └── src
+       ├──Package
+       │  ├── __init__.py
+       │  └── module.py
+       ├── __init__.py
+       ├── log_basic.py
+       ├── log_exception.py
+       ├── log_format.py
+       ├── log_handles.py
+       └── log_modules.py
 ```
 ## 6. Tài liệu tham khảo
 * [Documents python](https://docs.python.org/3/library/logging.html)
