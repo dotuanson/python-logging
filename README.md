@@ -17,7 +17,7 @@ giảm nhẹ được khối lượng công việc cho luồng code chính của
 > Tham khảo về cơ chế đa luồng: [Đa luồng trong Python (multithreading)](https://viblo.asia/p/da-luong-trong-python-multithreading-WAyK8MO6ZxX)
 
 ## 3. Có bao nhiêu log mà lập trình viên thường xài?
-<center style="font-style: italic">Thứ tự quan trọng của các mức tăng dần từ trên xuống</center>
+<center>Thứ tự quan trọng của các mức tăng dần từ trên xuống</center>
 
 | Mức            | Nội dung |
 | -----------    | ----------- |
