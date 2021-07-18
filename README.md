@@ -1,4 +1,4 @@
-![IDE](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green) 
+![IDE](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
 ![Language](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)
 ![Social](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
@@ -6,14 +6,16 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Tson99.python-logging)
 ## 1. Vì sao cần sử dụng log?
 Thông thường khi chúng ta muốn quan sát những gì đang xảy ra bên trong chương trình, thói quen của nhiều người
-mới học Python kể cả mình đó chính là sử dụng hàm `print()` để in lên terminal. Thay vào đó thì ở trong bài viết 
+mới học Python kể cả mình đó chính là sử dụng hàm `print()` để in lên terminal. Thay vào đó thì ở trong bài viết
 này tôi sẽ chỉ cho các bạn cách để một chương trình vừa chạy vừa có thể ghi log (Dưới dạng file hoặc terminal)
-giúp cho việc theo dõi lịch sử của chương trình rõ ràng hơn. 
+giúp cho việc theo dõi lịch sử của chương trình rõ ràng hơn.
+
+![](meme.png)
 
 ## 2. Làm sao sử dụng log trong python?
 Python có thư viện chuẩn hỗ trợ cho ghi log là `logging`. Thư viện viết theo hướng `multithreading` nên
 giảm nhẹ được khối lượng công việc cho luồng code chính của bạn rất nhiều.
-  
+
 > Tham khảo về cơ chế đa luồng: [Đa luồng trong Python (multithreading)](https://viblo.asia/p/da-luong-trong-python-multithreading-WAyK8MO6ZxX)
 
 ## 3. Có bao nhiêu log mà lập trình viên thường xài?
@@ -91,7 +93,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-### 4.3. Ghi log ra file và console 
+### 4.3. Ghi log ra file và console
 * File: [log_handles.py](src/log_handles.py)
 ```python
 import logging
